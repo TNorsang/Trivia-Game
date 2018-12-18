@@ -1,16 +1,35 @@
-/* ---------------  --------------- */
+/* --------------- Background --------------- */
 body {
     background-color: black;
     opacity: 0.7;
 }
 
-
-.img-fluid {
-    margin-top: -18%;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: -1 !important;
+/* --------------- Start Trivia Button --------------- */
+#title {
+    margin-left: 9%;
+    z-index: 1 !important;
+    
 }
+
+/* --------------- Main Logo Image 'Music Trivia' --------------- */
+
+.bgImage .img-fluid {
+    width: 61%;
+    margin-top: -10%;
+    margin-left: 19%;
+    z-index: 0 !important;
+}
+
+/* --------------- Main Image --------------- */
+
+.img1 {
+    margin-top: -17%;
+    margin-left: -2%;
+}
+
+
+
+
 #heading {
     margin-top: 10%;
     float: right;
@@ -26,3 +45,4 @@ body {
     position: relative;
     color: white;
 }
+

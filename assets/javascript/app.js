@@ -1,7 +1,10 @@
-// ------------------  ----------------\\
-
-
+// ------------------ Dom ready function ----------------\\
+$( document ).ready(function() {
+    
 // - Start to start the game
+$('#title').on('click', function(){
+    alert('hi!');
+});
 
 // ------------------  ----------------\\
 
@@ -14,3 +17,4 @@
 // - If you don't click an answer and timer runs out and shows right answer and then it moves on.
 // - At the end, It will show you the correct answers, incorrect answers and unanaswered.
 // - There will be a start over button and it will reset the game
+});
