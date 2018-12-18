@@ -1,5 +1,5 @@
 
-- Start to start the game. 
+- Start to start the game. *
 
 - A question with four answers will show.
 1) question 1
