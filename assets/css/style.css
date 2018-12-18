@@ -5,9 +5,9 @@ body {
 }
 
 /* --------------- Start Trivia Button --------------- */
-#title {
-    margin-left: 9%;
-    z-index: 1 !important;
+#startButtonWrapper {
+    width: 100%;
+    margin: auto;
     
 }
 
@@ -22,11 +22,19 @@ body {
 
 /* --------------- Main Image --------------- */
 
-.img1 {
+/* .img1 {
     margin-top: -17%;
     margin-left: -2%;
-}
+    z-index: 0 !important;
+} */
 
+#box {
+    width: 75%;
+    height: 500px;
+    background-color: gray;
+    z-index: 1;
+    margin: 0 auto;
+}
 
 
 
@@ -41,8 +49,5 @@ body {
     margin: 0 auto;
 }
 
-#titleWord {
-    position: relative;
-    color: white;
-}
+
 

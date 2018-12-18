@@ -1,10 +1,42 @@
+// var questions= [
+//     {
+//         question: "How are you?",
+//         asnwer1: "Fine",
+//         answer2: "Amazing",
+//         answer3: "good",
+//         answer4: "bad",
+//         rightAnswer: "Fine", 
+//     },
+//     {
+//         question: "Where are you?",
+//         asnwer1: "Fine",
+//         answer2: "Amazing",
+//         answer3: "good",
+//         answer4: "bad",
+//         rightAnswer: "Fine", 
+//     },
+// ];
+
+// $('#q1').text(object1);
+
+
+// questions[0].question
+// questions[1].asnwer1;
+
+
+
 // ------------------ Dom ready function ----------------\\
 $( document ).ready(function() {
     
 // - Start to start the game
-$('#title').on('click', function(){
-    alert('hi!');
+$('#startButton').on('click', function(){
+    $( "#startButton" ).hide();
+
+    
 });
+
+
+
 
 // ------------------  ----------------\\
 
