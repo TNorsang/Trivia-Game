@@ -1,7 +1,11 @@
 
-- Start to start the game
+- Start to start the game. 
+
 - A question with four answers will show.
-- There will be a timer on top
+1) question 1
+a) answer 1  b) answer 2 c) answer 3 d) answer 4
+
+- There will be a 1 minute timer on top 
 - If you click an answer, it will either say right or wrong.
 - If incorrect it will give the right answer
 - click next and it will move on to the next question
