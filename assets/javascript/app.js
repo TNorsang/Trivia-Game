@@ -1,5 +1,9 @@
 // ------------------ Dom ready function ----------------\\
 $(document).ready(function () {
+
+
+// ------------------ Questions & Answers ----------------\\
+
     var questions = [
         {
             question: "How are you?",
@@ -20,20 +24,38 @@ $(document).ready(function () {
     var correctAnswers = 0;
     var incorrectAanswers = 0;
     var unAnswered = 0;
+    var number = 30;
+    
+    function decrement() {
+        number--;
+        $('#timer').text(number);
+        console.log(number);
+    }
 
+    function countDown() {
+    setInterval(decrement, 1000);
+}
+
+    
     // ------------------  Start to start the game ----------------\\
     $('#startButton').on('click', function () {
         $("#startButton").hide();
+        countDown();
 
+     // ------------------  Function To Count Down ----------------\\    
+        
     });
 
 
-    // ------------------ A question with four answers will show. ----------------\\
+    // ------------------ A question with four answers will show ----------------\\
     function questions() {
-        
+       
     }
 
-
+    
+    
+    
+    
 
 
 
