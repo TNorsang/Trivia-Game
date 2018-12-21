@@ -1,31 +1,110 @@
 // ------------------ Dom ready function ----------------\\
 $(document).ready(function () {
 
+$('#next').hide();
 
-// ------------------ Questions & Answers ----------------\\
+// ------------------ Questions & answers ----------------\\
 
-    var questions = [
+    var myQuestions = [
         {
-            question: "How are you?",
-            choices: ["a", "b", "c", "d"],
-            Answer: "Fine",
+            question: "Where are you?",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
         },
         {
             question: "Where are you?",
-            asnwer1: "Fine",
-            answer2: "Amazing",
-            answer3: "good",
-            answer4: "bad",
-            Answer: "Fine",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
+        },
+        {
+            question: "Where are you?",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
+        },
+        {
+            question: "Where are you?",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
+        },
+        {
+            question: "Where are you?",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
+        },
+        {
+            question: "Where are you?",
+            answers: {
+                a: "Fine",
+                b: "Amazing",
+                c: "good",
+                d: "bad",
+            },
+            correctAnswer: "a",
         },
     ];
 
+// ------------------ Global Variables ----------------\\
 
-    var correctAnswers = 0;
+    var correctanswers = 0;
     var incorrectAanswers = 0;
-    var unAnswered = 0;
+    var unanswered = 0;
     var number = 30;
-    
+    var currentQuestion;
+    var intervalId;
+ 
+// ------------------ A question with four answers will show ----------------\\
+
+function nextQnA() {
+    $('#next').on('click', function(){
+    for (var i=0; i < myQuestions.length; i++) {
+        $('#q1').text(myQuestions[i].question);
+        $('#a1').html('<p>' + myQuestions[i].answers.a + '</p>');
+        $('#a2').html('<p>' + myQuestions[i].answers.b + '</p>');
+        $('#a3').html('<p>' + myQuestions[i].answers.c + '</p>');
+        $('#a4').html('<p>' + myQuestions[i].answers.d + '</p>');
+  }
+})
+}
+
+
+
+function showQnA() {
+    $('#q1').text(myQuestions[0].question);
+    $('#a1').html('<p>' + myQuestions[0].answers.a + '</p>');
+    $('#a2').html('<p>' + myQuestions[0].answers.b + '</p>');
+    $('#a3').html('<p>' + myQuestions[0].answers.c + '</p>');
+    $('#a4').html('<p>' + myQuestions[0].answers.d + '</p>'); 
+};
+
+        
+
+// ------------------ Function for CountDown ----------------\\
+
     function decrement() {
         number--;
         $('#timer').text(number);
@@ -33,31 +112,33 @@ $(document).ready(function () {
     }
 
     function countDown() {
-    setInterval(decrement, 1000);
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
 }
-
     
-    // ------------------  Start to start the game ----------------\\
+// ------------------  Start to start the game ----------------\\
+
+
     $('#startButton').on('click', function () {
         $("#startButton").hide();
+        $('#next').show();
         countDown();
-
-     // ------------------  Function To Count Down ----------------\\    
+        showQnA();   
         
     });
 
 
-    // ------------------ A question with four answers will show ----------------\\
-    function questions() {
-       
+
+// ------------------ Time Stop Function ----------------\\
+
+    function stop() {
+        clearInterval(intervalId);
     }
 
-    
-    
-    
-    
 
-
+    
+    
+});
 
 
 
@@ -80,7 +161,7 @@ $(document).ready(function () {
 
 
 
-})
+
 
 
 
