@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -20,33 +20,101 @@
             <div id="heading">
             </div>
         </div>
+
         <div class="mainPage">
-            <!-- The Box where the whole contents goes in -->
+
             <div id="box">
-                <div id="startButtonWrapper">
-                    <button type="button" id="startButton" class="btn btn-outline-light">Start Trivia!</button>
-                </div>
 
+                <!-- Start Trivia Button -->
+                <div id="startButtonWrapper">
+                    <button type="button" id="startButton" class="btn btn-outline-dark">Start Trivia!</button>
+                </div>
+                <br><br><br>
                 <div class="myTimer">
-                    Time Remaining <div id="timer"></div>
+                    Time Remaining <h2 id="timer"></h2>
                 </div>
+                <br><br>
 
-                <div class="questions">
-                    <div id="q1"></div>
-                </div>
+                <div class="contents">
+                    <form name="myForm" onsubmit="return submitAnswers()">
 
-                <div class="answers">
-                    <div id="a1"></div> 
-                    <div id="a2"></div> 
-                    <div id="a3"></div> 
-                    <div id="a4"></div> 
-                </div>
-
-                <div id="startButtonWrapper">
-                    <button type="button" id="next" class="btn btn-outline-light"> Next </button>
+                        <!-- Question 1 -->
+                        <div class="questions">
+                            <div id="q1"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a1" value="a" id="a1a"> Eminem</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a1" value="b" id="a1b"> Lady Gaga</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a1" value="c" id="a1c"> Drake</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a1" value="d" id="a1d"> Bob Dylan</input> &nbsp&nbsp&nbsp
+                        </div>
+                        <br><br><br>
+                        <!-- Question 2 -->
+                        <div class="questions">
+                            <div id="q2"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a2" value="a" id="a2a"> Jay-Z</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a2" value="b" id="a2b"> Blake Shelton</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a2" value="c" id="a2c"> Kanye West</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a2" value="d" id="a2d"> xxxTentacion</input> &nbsp&nbsp&nbsp
+                        </div>
+                        <br><br><br>
+                        <!-- Question 3 -->
+                        <div class="questions">
+                            <div id="q3"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a3" value="a" id="a3a"> Travis Scott</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a3" value="b" id="a3b"> Usher</input> &nbsp&nbsp&nbsp
+                            <input type="radio" name="a3" value="c" id="a3c"> Cardi B</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a3" value="d" id="a3d"> Sia</input>&nbsp&nbsp&nbsp
+                        </div>
+                        <br><br><br>
+                        <!-- Question 4 -->
+                        <div class="questions">
+                            <div id="q4"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a4" value="a" id="a4a"> Selena Gomez</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a4" value="b" id="a4b"> Adele</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a4" value="c" id="a4c"> Ariana Grande</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a4" value="d" id="a4d"> Nicki Minaj</input>&nbsp&nbsp&nbsp
+                        </div>
+                        <br><br><br>
+                        <!-- Question 5 -->
+                        <div class="questions">
+                            <div id="q5"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a5" value="a" id="a5a"> 50 Cent</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a5" value="b" id="a5b"> lil Wayne</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a5" value="c" id="a5c"> Meek Mill</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a5" value="d" id="a5d"> 2 Chains</input>&nbsp&nbsp&nbsp
+                        </div>
+                        <br><br><br>
+                        <!-- Question 6 -->
+                        <div class="questions">
+                            <div id="q6"></div>
+                        </div>
+                        <br>
+                        <div class="answers">
+                            <input type="radio" name="a6" value="a" id="a6a"> Adele</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a6" value="b" id="a6b"> Sia</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a6" value="c" id="a6c"> John Legend</input>&nbsp&nbsp&nbsp
+                            <input type="radio" name="a6" value="d" id="a6d"> Lorde</input>&nbsp&nbsp&nbsp
+                        </div>
+                        <br><br>
+                        <input id="submitButton" type="submit" value="Submit Answers">
+                    </form>
                 </div>
             </div>
-        
+
 
 
         </div>

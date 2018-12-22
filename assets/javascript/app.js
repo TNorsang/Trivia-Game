@@ -1,205 +1,129 @@
 // ------------------ Dom ready function ----------------\\
 $(document).ready(function () {
 
-$('#next').hide();
-$('.myTimer').hide();
-// ------------------ Questions & answers ----------------\\
+    $('.myTimer').hide();
+    $('.contents').hide();
+    // ------------------ Questions & answers ----------------\\
 
     var myQuestions = [
         {
-            question: "Where are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '1) Who sang this? "She say, "Do you love me? I tell her, "Only partly" I only love my bed and my momma, Im sorry"',
+
+            
         },
         {
-            question: "How are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '2) Who sang this "Who am I? Someone thats afraid to let go, uh You decide, if you are ever gonna let me know, yeah"',
+
+            
         },
         {
-            question: "Where are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '3) Who sang this? "Sun is down, freezin" cold Thats how we already know winters here"',
+
+            
         },
         {
-            question: "Where are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '4) Who sang this? "She taught me love (love) She taught me patience (patience) How she handles pain (pain) That shits amazing (yeah, shes amazing)"',
+
+            
         },
         {
-            question: "Where are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '5) Who sang this? "See you had a lot of crooks try to steal your heart Never really had luck, couldnt never figure out"',
+
+            
         },
         {
-            question: "Where are you?",
-            answers: {
-                a: "Fine",
-                b: "Amazing",
-                c: "good",
-                d: "bad",
-            },
-            correctAnswer: "Fine"
+            question: '6) Who sang this? "You’re sayin those words like you hate me now (Wo-oah) Our house is burning when youre raisin Hell (Wo-oah)"',
+
+            
         },
     ];
 
-// ------------------ Global Variables ----------------\\
+    // ------------------ Global Variables ----------------\\
 
-    var correctAnswers = 0;
-    var incorrectAnswers = 0;
     var unanswered = 0;
-    var number = 5;
+    var number = 60;
     var currentQuestion;
     var intervalId;
     var userGuess;
- 
+    var answers = ['c','d','a','c','b','b'];
+    // ------------------ A question with four answers will show ----------------\\
 
+    function showQnA(the) {
 
-// function nextQnA() {
-//     $('#next').on('click', function(){
-    
-//     for (var i=0; i < myQuestions.length; i++) {
-//         $('#q1').text(myQuestions[i].question);
-//         $('#a1').html('<p>' + myQuestions[i].answers.a + '</p>');
-//         $('#a2').html('<p>' + myQuestions[i].answers.b + '</p>');
-//         $('#a3').html('<p>' + myQuestions[i].answers.c + '</p>');
-//         $('#a4').html('<p>' + myQuestions[i].answers.d + '</p>');
-//   }
-// })
-// }
+        // Questions \\
+        $('#q1').text(myQuestions[0].question);
+        $('#q2').text(myQuestions[1].question);
+        $('#q3').text(myQuestions[2].question);
+        $('#q4').text(myQuestions[3].question);
+        $('#q5').text(myQuestions[4].question);
+        $('#q6').text(myQuestions[5].question);
 
-// ------------------ A question with four answers will show ----------------\\
-
-function showQnA(the) {
-    $('#q1').text(myQuestions[0].question);
-    $('#a1').html('<input type="radio">' + myQuestions[0].answers.a + '</button>');
-    $('#a2').html('<input type="radio">' + myQuestions[0].answers.b + '</button>');
-    $('#a3').html('<input type="radio">' + myQuestions[0].answers.c + '</button>');
-    $('#a4').html('<input type="radio">' + myQuestions[0].answers.d + '</button>');
-
-    if( the === myQuestions.correctAnswer) {
-        console.log('This is correct');
-        correctAnswers++
-        console.log(correctAnswers);
-    } else if($('#connecting-rod').is(':checked') ) {
-        console.log('This is correct');
-        correctAnswers++;
-        console.log(correctAnswers);
-    } else if($('#exhaust-gas').is(':checked')) {
-        console.log('This is correct');
-        correctAnswers++
-        console.log(correctAnswers);
+        // if (the === myQuestions.correctAnswer) {
+        //     console.log('This is correct');
+        //     correctAnswers++
+        //     console.log(correctAnswers);
+        // } else if ($('#connecting-rod').is(':checked')) {
+        //     console.log('This is correct');
+        //     correctAnswers++;
+        //     console.log(correctAnswers);
+        // } else if ($('#exhaust-gas').is(':checked')) {
+        //     console.log('This is correct');
+        //     correctAnswers++
+        //     console.log(correctAnswers);
+        // }
     }
-};
+
+    function submitAnswers() {
+        var correctAnswers = 0;
+        var incorrectAnswers = 0;
+        
+        var a1 = $( "input[type=radio][name=a1]:checked" ).val();
+        alert(input);
+        // if () {
+
+        // }
 
         
 
-// ------------------ Function for CountDown ----------------\\
+        }
+    
+
+    // ------------------ Function for CountDown ----------------\\
 
     function decrement() {
         number--;
         $('#timer').text(number);
-        
+
         if (number === 0) {
-            alert("Times Up!"); 
+            alert("Times Up!");
             stop();
-            
-    }
+
+        }
     }
 
     function countDown() {
-    clearInterval(intervalId);
-    intervalId = setInterval(decrement, 1000);
-    
+        clearInterval(intervalId);
+        intervalId = setInterval(decrement, 1000);
+
     }
 
-    
-// ------------------  Start to start the game ----------------\\
-
+    // ------------------  Start to start the game ----------------\\
 
     $('#startButton').on('click', function () {
         $("#startButton").hide();
         $('#next').show();
         $('.myTimer').show();
+        $('.contents').show();
         countDown();
-        showQnA();   
-        
+        showQnA();
+
     });
 
-
-
-// ------------------ Time Stop Function ----------------\\
+    // ------------------ Time Stop Function ----------------\\
 
     function stop() {
         clearInterval(intervalId);
     }
 
 
-    
-    
 });
-
-
-
-
-
-
-    // ------------------  ----------------\\
-
-
-
-    // - There will be a timer on top
-    // - If you click an answer, it will either say right or wrong.
-    // - If incorrect it will give the right answer
-    // - click next and it will move on to the next question
-    // - If you don't click an answer and timer runs out and shows right answer and then it moves on.
-    // - At the end, It will show you the correct answers, incorrect answers and unanaswered.
-    // - There will be a start over button and it will reset the game
-
-
-    // $('.choice').on('click',function () {
-    //     if($('#honda').is(':checked')) {
-    //         console.log('This is correct');
-    //         correctAnswers++
-    //         console.log(correctAnswers);
-    //     } else if($('#connecting-rod').is('checked') ) {
-    //         console.log('This is correct');
-    //         correctAnswers++;
-    //         console.log(correctAnswers);
-    //     } else if($('#exhaust-gas').is(':checked')) {
-    //         console.log('This is correct');
-    //         correctAnswers++
-    //         console.log(correctAnswers);
-    //     }
-    // })
-
-
-
-
-
-
