@@ -91,6 +91,16 @@ $(document).ready(function () {
         $('#corAns').html('<p> Correct Answer : ' + correctAnswers + '</p>')
         $('#incAns').html('<p> Incorrect Answer :' + incorrectAnswers + '</p>')
     }
+// =========== Restart Function =========== \\
+
+    $('#restartBtn').on('click', function () {
+        
+            location.reload();
+        
+    })
+
+    
+
 
     // ------------------  Start to start the game ----------------\\
     

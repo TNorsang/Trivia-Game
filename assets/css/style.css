@@ -59,7 +59,7 @@ body {
 
 /* Incorrect and Correct Attributes */
 .score {
-    padding-top: 9%;
+    padding-top: 5%;
     text-align: center;
     color: white;
     font-size: 8.0vh;
@@ -82,6 +82,7 @@ body {
 }
 /* Timer Attributes */
 .myTimer {
+    font-size: 3vh;
     text-align: center;
     color: white;
 }
@@ -100,4 +101,10 @@ body {
 .contents {
     text-align: center;
     padding-top: 5%;
+}
+/* Restart Button */
+.btn {
+    padding: 1px 25px 1px 25px;
+    margin-top: -3%;
+    font-size: 5vh;
 }
