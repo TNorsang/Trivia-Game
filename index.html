@@ -16,118 +16,124 @@
     <!-- Container where all the design goes in -->
     <div class="container">
         <div class="bgImage">
-            <img src="assets/images/bg.jpg" class="img-fluid" alt="background-image">
+            <img src="assets/images/bgmain.png" class="img-fluid" alt="background-image">
             <div id="heading">
             </div>
         </div>
 
         <div class="mainPage">
-
-            <div id="box">
+<!-- The Initial Box Setup -->
+            <div id="box1">
 
                 <!-- Start Trivia Button -->
                 <div id="startButtonWrapper">
-                    <button type="button" id="startButton" class="btn btn-outline-dark">Start Trivia!</button>
+                    <img src="assets/images/bg-gif.gif" id="gifBackground">
+                    <button type="button" id="startButton" class="btn btn-outline-warning">Start Trivia!</button>
                 </div>
                 <br><br><br>
+            </div>
+        </div>
+<!-- The Box that appears after clicking Start Trivia -->
+        <div id="box2">
+
+            <div class="contents">
                 <div class="myTimer">
                     Time Remaining <h2 id="timer"></h2>
                 </div>
                 <br><br>
 
-                <div class="contents">
-                    <form name="myForm">
+                <form name="myForm">
 
-                        <!-- Question 1 -->
-                        <div class="questions">
-                            <div id="q1"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a1" value="a" id="a1a"> Eminem</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a1" value="b" id="a1b"> Lady Gaga</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a1" value="c" id="a1c"> Drake</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a1" value="d" id="a1d"> Bob Dylan</input> &nbsp&nbsp&nbsp
-                        </div>
-                        <br><br><br>
-                        <!-- Question 2 -->
-                        <div class="questions">
-                            <div id="q2"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a2" value="a" id="a2a"> Jay-Z</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a2" value="b" id="a2b"> Blake Shelton</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a2" value="c" id="a2c"> Kanye West</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a2" value="d" id="a2d"> xxxTentacion</input> &nbsp&nbsp&nbsp
-                        </div>
-                        <br><br><br>
-                        <!-- Question 3 -->
-                        <div class="questions">
-                            <div id="q3"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a3" value="a" id="a3a"> Travis Scott</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a3" value="b" id="a3b"> Usher</input> &nbsp&nbsp&nbsp
-                            <input type="radio" name="a3" value="c" id="a3c"> Cardi B</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a3" value="d" id="a3d"> Sia</input>&nbsp&nbsp&nbsp
-                        </div>
-                        <br><br><br>
-                        <!-- Question 4 -->
-                        <div class="questions">
-                            <div id="q4"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a4" value="a" id="a4a"> Selena Gomez</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a4" value="b" id="a4b"> Adele</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a4" value="c" id="a4c"> Ariana Grande</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a4" value="d" id="a4d"> Nicki Minaj</input>&nbsp&nbsp&nbsp
-                        </div>
-                        <br><br><br>
-                        <!-- Question 5 -->
-                        <div class="questions">
-                            <div id="q5"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a5" value="a" id="a5a"> 50 Cent</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a5" value="b" id="a5b"> lil Wayne</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a5" value="c" id="a5c"> Meek Mill</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a5" value="d" id="a5d"> 2 Chains</input>&nbsp&nbsp&nbsp
-                        </div>
-                        <br><br><br>
-                        <!-- Question 6 -->
-                        <div class="questions">
-                            <div id="q6"></div>
-                        </div>
-                        <br>
-                        <div class="answers">
-                            <input type="radio" name="a6" value="a" id="a6a"> Adele</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a6" value="b" id="a6b"> Sia</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a6" value="c" id="a6c"> John Legend</input>&nbsp&nbsp&nbsp
-                            <input type="radio" name="a6" value="d" id="a6d"> Lorde</input>&nbsp&nbsp&nbsp
-                        </div>
-                        <br><br>
-                        <input id="submitButton" value="Submit Answers">
-                    </form>
-                </div>
-            <div class="box2">
-                <div class="score">
-                    <div id="corAns"></div>
-                    <div id="incAns"></div>
-                </div>
+                    <!-- Question 1 -->
+                    <div class="questions">
+                        <div id="q1"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a1" value="a" id="a1a"> Eminem</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a1" value="b" id="a1b"> Lady Gaga</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a1" value="c" id="a1c"> Drake</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a1" value="d" id="a1d"> Bob Dylan</input> &nbsp&nbsp&nbsp
+                    </div>
+                    <br><br><br>
+                    <!-- Question 2 -->
+                    <div class="questions">
+                        <div id="q2"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a2" value="a" id="a2a"> Jay-Z</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a2" value="b" id="a2b"> Blake Shelton</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a2" value="c" id="a2c"> Kanye West</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a2" value="d" id="a2d"> xxxTentacion</input> &nbsp&nbsp&nbsp
+                    </div>
+                    <br><br><br>
+                    <!-- Question 3 -->
+                    <div class="questions">
+                        <div id="q3"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a3" value="a" id="a3a"> Travis Scott</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a3" value="b" id="a3b"> Usher</input> &nbsp&nbsp&nbsp
+                        <input type="radio" name="a3" value="c" id="a3c"> Cardi B</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a3" value="d" id="a3d"> Sia</input>&nbsp&nbsp&nbsp
+                    </div>
+                    <br><br><br>
+                    <!-- Question 4 -->
+                    <div class="questions">
+                        <div id="q4"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a4" value="a" id="a4a"> Selena Gomez</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a4" value="b" id="a4b"> Adele</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a4" value="c" id="a4c"> Ariana Grande</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a4" value="d" id="a4d"> Nicki Minaj</input>&nbsp&nbsp&nbsp
+                    </div>
+                    <br><br><br>
+                    <!-- Question 5 -->
+                    <div class="questions">
+                        <div id="q5"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a5" value="a" id="a5a"> 50 Cent</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a5" value="b" id="a5b"> lil Wayne</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a5" value="c" id="a5c"> Meek Mill</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a5" value="d" id="a5d"> 2 Chains</input>&nbsp&nbsp&nbsp
+                    </div>
+                    <br><br><br>
+                    <!-- Question 6 -->
+                    <div class="questions">
+                        <div id="q6"></div>
+                    </div>
+                    <br>
+                    <div class="answers">
+                        <input type="radio" name="a6" value="a" id="a6a"> Adele</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a6" value="b" id="a6b"> Sia</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a6" value="c" id="a6c"> John Legend</input>&nbsp&nbsp&nbsp
+                        <input type="radio" name="a6" value="d" id="a6d"> Lorde</input>&nbsp&nbsp&nbsp
+                    </div>
+                    <br><br>
+                    <input id="submitButton" value="Submit Answers">
+                </form>
             </div>
-
-
-            </div>
-
-
-
         </div>
-    </div>
+<!-- Score Box after pressing submit answer -->
+        <div id="scoreBox">
+            <div class="score">
+                <div id="goodTry"></div>
+                <div id="timesUp"></div>
+                <div id="corAns"></div>
+                <div id="incAns"></div>
+            </div>
+        </div>
 
+
+    </div>
+    </div>
+<!-- Linking the Java script files. One is Jquery and other is Vanilla Javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>

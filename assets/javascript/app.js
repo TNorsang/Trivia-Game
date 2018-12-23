@@ -1,6 +1,7 @@
 // ------------------ Dom ready function ----------------\\
 $(document).ready(function () {
-
+    $('#box2').hide();
+    $('#scoreBox').hide();
     $('.myTimer').hide();
     $('.contents').hide();
     // ------------------ Questions & answers ----------------\\
@@ -39,12 +40,13 @@ $(document).ready(function () {
     ];
 
     // ------------------ Global Variables ----------------\\
-    var unanswered = 0;
-    var number = 60;
+    
+    var number = 61;
     var currentQuestion;
     var intervalId;
     var correctAnswers = 0;
     var incorrectAnswers = 0;
+    var unanswered = 0;
 
     // ------------------ A question with four answers will show ----------------\\
 
@@ -70,7 +72,7 @@ $(document).ready(function () {
         if (number === 0) {
             alert("Times Up!");
             stop();
-
+            reset();
         }
     }
 
@@ -79,14 +81,26 @@ $(document).ready(function () {
         intervalId = setInterval(decrement, 1000);
 
     }
+// ============ Reset Function ========== \\
+    function reset() {
+        $('#box1').hide();
+        $('#box2').hide();
+        $('#scoreBox').show();
+        $('#goodTry').hide();
+        $('#timesUp').html('<p> Times Up! :( </p>')
+        $('#corAns').html('<p> Correct Answer : ' + correctAnswers + '</p>')
+        $('#incAns').html('<p> Incorrect Answer :' + incorrectAnswers + '</p>')
+    }
 
     // ------------------  Start to start the game ----------------\\
-
+    
     $('#startButton').on('click', function () {
         $("#startButton").hide();
+        $("#box1").hide();
         $('#next').show();
         $('.myTimer').show();
         $('.contents').show();
+        $('#box2').show();
         countDown();
         showQnA();
 
@@ -98,86 +112,89 @@ $(document).ready(function () {
         clearInterval(intervalId);
     }
     // var answers = ['c', 'd', 'a', 'c', 'b', 'b'];
-    // If and Else statements for the winning and losing conditions \\
-    $(document).on('change', 'input[name="a1"]',
+    
+// =================== This is the logic for capturing user input and setting W/L condition =========== \\
+    $(document).one('change', 'input[name="a1"]',
         function () {
             console.log(this);
             if ($('#a1c').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi');
             } else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
 
-    $(document).on('change', 'input[name="a2"]',
+    $(document).one('change', 'input[name="a2"]',
         function () {
             console.log(this);
             if ($('#a2d').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi2');
-            } else {
+            } 
+            // else if () { 
+
+            // }  
+            else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
 
-    $(document).on('change', 'input[name="a3"]',
+    $(document).one('change', 'input[name="a3"]',
         function () {
             console.log(this);
             if ($('#a3a').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi3');
             } else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
 
-    $(document).on('change', 'input[name="a4"]',
+    $(document).one('change', 'input[name="a4"]',
         function () {
             console.log(this);
             if ($('#a4c').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi4');
             } else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
 
-    $(document).on('change', 'input[name="a5"]',
+    $(document).one('change', 'input[name="a5"]',
         function () {
             console.log(this);
             if ($('#a5b').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi5');
             } else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
-    $(document).on('change', 'input[name="a6"]',
+    $(document).one('change', 'input[name="a6"]',
         function () {
             console.log(this);
             if ($('#a6b').is(':checked') && $(this).val()) {
                 correctAnswers++;
                 console.log(correctAnswers);
-                alert('hi6');
             } else {
                 incorrectAnswers++;
                 console.log(incorrectAnswers);
             }
         });
 
+// ================ When you click submit button it hides/shows contents and also displays the scores ============ \\
     $("#submitButton").click(function () {
-        $('.contents').hide();
+        $('#box2').hide();
+        $('#scoreBox').show();
+        $('#timesUp').hide();
+        $('#goodTry').html('<p> Good Try! :) </p>')
         $('#corAns').html('<p> Correct Answer : ' + correctAnswers + '</p>')
         $('#incAns').html('<p> Incorrect Answer :' + incorrectAnswers + '</p>')
         
